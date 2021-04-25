@@ -1,0 +1,194 @@
+/* 
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700 */
+
+:root{
+    --heading-font: 'Big Shoulders Display';
+    --heading-font-weight: 700;
+    --primary-white:  hsl(0, 0%, 95%); 
+
+    
+
+    --paragraph-font: 'Lexend Deca'; 
+    --paragraph-font-weight: 400; 
+    --paragraph-txt-color: hsla(0, 0%, 100%, 0.75);
+
+    --button-border: 20px; 
+    --border-style: none;  
+
+    --main-color-one: hsl(31, 77%, 52%);
+    --main-color-two: hsl(184, 100%, 22%);
+    --main-color-three: hsl(179, 100%, 13%);
+    --button-padding:1.1em; 
+    --bottom-margin: 10px; 
+
+    --left-margin: 50px; 
+
+}
+
+img{
+    margin-left: var(--left-margin);
+    margin-top: 35px;
+}
+
+
+h2{
+    font-family: var(--heading-font); 
+    font-weight: var(--heading-font-weight);
+    color: var(--primary-white);
+}
+
+section{
+    height: 30em; 
+}
+
+button{
+    background-color: var(--primary-white);
+    border-radius: var(--button-border);
+    font-family: var(--paragraph-font);
+    padding: var(--button-padding);
+    margin-bottom: var(--bottom-margin);
+    border: var(--border-style);  
+    margin-left: var(--left-margin);
+    padding-left:  2.5em;
+    padding-right: 2.5em;
+    margin-top: 35%;
+}
+
+
+p{
+   font-family: var(--paragraph-font);
+   font-weight:  var(--paragraph-font-weight);
+   color: var(--paragraph-txt-color);
+}
+
+body{
+    background-color: var(--primary-white);
+    
+}
+
+#one{
+    background-color: var(--main-color-one);
+}
+
+#one button{
+    color: var(--main-color-one);
+    }
+
+#two{
+    background-color: var(--main-color-two);
+
+}
+
+#two button{
+    color: var(--main-color-two);
+
+}
+
+#three{
+    background-color: var(--main-color-three);
+ 
+
+}
+
+
+
+.text{
+    margin-left:var(--left-margin);
+    width: 15em;
+    
+}
+
+@media(orientation:portrait){
+
+    body{
+        width: 375px;
+        margin-left: auto; 
+        margin-right: auto; 
+       
+      
+    }
+
+    #container{
+        margin-top: 20%; 
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "#one"
+        "two"
+        "three";
+        width: 90%; 
+        
+    
+    }
+
+    #one{
+        border-radius: 5px 5px 0 0 ; 
+    }
+    #three{
+        border-radius: 0 0 5px 5px; 
+    }
+
+
+}
+
+@media(orientation:landscape){
+    body{
+        width: 1440px;
+        
+       
+    }
+
+    #container{
+        margin-top: 10%; 
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto; 
+        grid-template-areas: 
+        "#one"
+        "#two"
+        "#three";
+        width: 70%;
+        margin-left: auto; 
+        margin-right: auto; 
+        
+    }
+
+    #one{
+        border-radius: 5px 0 0 5px; 
+    }
+    #three{
+        border-radius: 0 5px 5px 0; 
+    }
+
+}
